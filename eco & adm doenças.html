@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Economia & Administração das Doenças 5.0 — A Nova Economia da Saúde</title>
+<style>
+  :root{
+    --bg:#0a0d14; --panel:#111826; --ink:#eaf2ff; --muted:#9fb3c9;
+    --cyan:#7dd3fc; --pink:#ff4d6d; --line:rgba(125,211,252,.18);
+    --success:#22c55e; --warn:#f59e0b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,Roboto,Arial,sans-serif}
+  a{color:inherit}
+  /* Header */
+  header{
+    background: radial-gradient(1200px 420px at 50% -20%, #102033 20%, #0d1623 60%, #0a0d14 100%);
+    padding:64px 20px 36px; text-align:center; border-bottom:1px solid var(--line)
+  }
+  .badge{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:#cfe8ff;font-size:.84rem;margin:0 6px 10px}
+  header h1{font-size:2.6rem;margin:8px 0 12px;color:var(--cyan);letter-spacing:.2px}
+  header p{max-width:980px;margin:0 auto 18px;color:#cfe0f8;font-size:1.12rem;line-height:1.6}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .btn{background:var(--pink);color:#fff;font-weight:700;padding:14px 22px;border-radius:10px;text-decoration:none;box-shadow:0 16px 36px rgba(255,77,109,.18)}
+  .btn.alt{background:var(--cyan);color:#0a0d14}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:#cfe8ff}
+  /* Container */
+  .wrap{max-width:1120px;margin:0 auto;padding:36px 20px}
+  h2.section{font-size:1.9rem;color:var(--cyan);margin:12px 0 8px}
+  p.lead{color:#cfe0f8;font-size:1.08rem}
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:16px}
+  .card{background:var(--panel);border-radius:14px;padding:22px;border:1px solid var(--line)}
+  .card h3{color:var(--pink);margin:0 0 6px}
+  .card p{color:#cbd5e1;line-height:1.55}
+  .bullets{margin:10px 0 0;padding:0 0 0 20px;color:#cfe0f8}
+  .bullets li{margin:6px 0}
+  /* Offer Blocks */
+  .offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:14px}
+  .offer{background:linear-gradient(180deg,#111826,#0f1a27);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+  .offer h3{margin:0 0 8px;color:var(--cyan)}
+  .price{font-size:1.8rem;font-weight:800;color:#fff;margin:6px 0 2px}
+  .small{color:#9fb3c9;font-size:.92rem}
+  .ribbon{position:absolute;top:14px;right:-6px;background:var(--pink);color:#fff;font-weight:800;padding:6px 10px;border-radius:6px}
+  .offer .btn{display:block;text-align:center;margin-top:12px}
+  /* Proof / Outcomes */
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .badge2{padding:10px 12px;border:1px dashed var(--line);border-radius:10px;color:#cfe8ff;background:#0c1621}
+  /* FAQ */
+  details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  details+details{margin-top:10px}
+  summary{font-weight:700;color:#cfe8ff;cursor:pointer}
+  footer{border-top:1px solid var(--line);color:#9fb3c9;text-align:center;padding:30px 16px;margin-top:30px}
+  /* Hero checklist */
+  .checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:16px auto 4px;max-width:980px}
+  .check{background:#0d1623;border:1px solid var(--line);border-radius:12px;padding:10px 14px;color:#cfe8ff}
+  .tag{display:inline-block;background:#0e2433;border:1px solid var(--line);padding:6px 8px;border-radius:8px;color:#cfe8ff;margin:6px 6px 0 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Curso livre com certificado</div>
+  <div class="badge">Para médicos, executivos, gestores e inovadores</div>
+  <h1>Economia & Administração das Doenças 5.0</h1>
+  <p>Transforme doença em estratégia. Domine decisões intertemporais, reduza perdas, crie eficiência clínica e financeira e abra caminho para inovação, novos serviços e <strong>negócios de saúde</strong>.</p>
+  <div class="checks">
+    <div class="check">Economia das Doenças • Administração Anti-Assimétrica • Neuroeconomia</div>
+    <div class="check">Direito Anti-Contenda • Criptoeconomia • Estado Online</div>
+    <div class="check">Novos modelos de clínicas & hospitais • Inovação e P&D</div>
+  </div>
+  <div class="cta-row">
+    <a href="#ofertas" class="btn">Quero entrar agora</a>
+    <a href="#programa" class="btn alt">Ver o conteúdo</a>
+    <a href="#faq" class="btn ghost">Dúvidas frequentes</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Benefícios imediatos -->
+  <section>
+    <h2 class="section">Para quem é — e o que você ganha na prática</h2>
+    <p class="lead">Feito para médicos (todas as especialidades), executivos, gestores hospitalares e empreendedores que precisam <strong>decidir melhor hoje</strong> para acumular valor ao longo do tempo: dinheiro, saúde, tempo e reputação.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Médicos & Profissionais de Saúde</h3>
+        <ul class="bullets">
+          <li>Algoritmos de decisão clínica com <em>custo-efeito</em> (economia das doenças)</li>
+          <li>Protocolos enxutos e <strong>redução de contenda</strong> (direito anti-contenda)</li>
+          <li>Modelos de receita: serviços premium, segunda opinião, licenciamento e P&D</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Executivos & Gestores</h3>
+        <ul class="bullets">
+          <li>Métricas anti-assimétricas: onde estão as perdas invisíveis e como cortá-las</li>
+          <li>Design de clínicas/linhas de cuidado com ROI e <strong>eficiência de capital</strong></li>
+          <li>Contratos, governança e compliance orientados a desfecho</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Instituições & In-Company</h3>
+        <ul class="bullets">
+          <li>Estratégia 5.0 para redes, hospitais, operadoras e healthtechs</li>
+          <li>Playbooks de implementação e PMO de projetos prioritários</li>
+          <li>Mentoria executiva + <strong>Programa Seja Sócio</strong> para spin-offs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="badges">
+      <div class="badge2">Decisões intertemporais (acúmulo de riqueza/saúde)</div>
+      <div class="badge2">Economia Anti-Assimétrica aplicada</div>
+      <div class="badge2">Administração das Doenças (I & II)</div>
+      <div class="badge2">Economia das Doenças (I & II)</div>
+      <div class="badge2">Neuroeconomia da Prosperidade</div>
+    </div>
+  </section>
+
+  <!-- Ofertas -->
+  <section id="ofertas">
+    <h2 class="section">Escolha seu caminho</h2>
+    <div class="offers">
+      <div class="offer">
+        <h3>Economia das Doenças 5.0</h3>
+        <p class="small">Doenças como fenômenos econômicos: vetores, escolhas, custos ocultos e impacto sistêmico.</p>
+        <ul class="bullets">
+          <li>Vetores neuroeconômicos e ambientais</li>
+          <li>Modelagem de risco x desfecho x custo</li>
+          <li>Políticas, mercado e inovação</li>
+        </ul>
+        <div class="price">R$ 3.997</div>
+        <div class="small">Curso livre • Certificado • Acesso à comunidade</div>
+        <a class="btn" href="#checkout">Garantir minha vaga</a>
+      </div>
+
+      <div class="offer">
+        <h3>Administração das Doenças 5.0</h3>
+        <p class="small">Gestão anti-assimétrica das doenças: processos, governança, direito e tecnologia.</p>
+        <ul class="bullets">
+          <li>Administração Anti-Assimétrica (I & II)</li>
+          <li>Direito Anti-Contenda & Criptodireito</li>
+          <li>Operação, indicadores e escalabilidade</li>
+        </ul>
+        <div class="price">R$ 3.997</div>
+        <div class="small">Curso livre • Certificado • Acesso à comunidade</div>
+        <a class="btn" href="#checkout">Quero este</a>
+      </div>
+
+      <div class="offer">
+        <div class="ribbon">MAIS VENDIDO</div>
+        <h3>Combo 5.0 — Economia + Administração</h3>
+        <p class="small">Tudo dos dois cursos + <strong>mentoria em grupo</strong> e prioridade no Programa Seja Sócio.</p>
+        <ul class="bullets">
+          <li>Economia das Doenças 5.0 (I & II)</li>
+          <li>Administração das Doenças 5.0 (I & II)</li>
+          <li>Bônus: Neuroeconomia da Prosperidade & P&D</li>
+        </ul>
+        <div class="price">R$ 4.997</div>
+        <div class="small">Melhor custo-benefício • Acesso por 12 meses</div>
+        <a class="btn alt" href="#checkout">Entrar no Combo 5.0</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programa / conteúdos -->
+  <section id="programa">
+    <h2 class="section">Conteúdo Programático 5.0 (resumo)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Fundamentos</h3>
+        <ul class="bullets">
+          <li>Economia Anti-Assimétrica & Administração da Vida</li>
+          <li>Vetores de propensão a doenças (neuroeconômicos, institucionais, genéticos, ambientais)</li>
+          <li>Biocapitalismo, Estado Online e modelos de mercado em saúde</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Economia das Doenças (I & II)</h3>
+        <ul class="bullets">
+          <li>Doença como evento econômico: riscos, incentivos, assimetrias</li>
+          <li>Custos invisíveis, decisões intertemporais e desenho de política</li>
+          <li>Mapas de valor: paciente, médico, pagador, regulador</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Administração das Doenças (I & II)</h3>
+        <ul class="bullets">
+          <li>Processos, governança e métricas anti-assimétricas</li>
+          <li>Direito Anti-Contenda & descentralização segura</li>
+          <li>Implantação: PMO, playbooks e auditoria de perdas</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Neuroeconomia & P&D</h3>
+        <ul class="bullets">
+          <li>Neuroeconomia da Prosperidade e decisões sob incerteza</li>
+          <li>Pesquisa & Desenvolvimento: rotas de produto e serviço</li>
+          <li>Inovação regulatória e modelos de monetização</li>
+        </ul>
+      </div>
+    </div>
+    <div class="badges">
+      <span class="tag">Aulas gravadas + encontros ao vivo</span>
+      <span class="tag">Templates de decisão e planilhas</span>
+      <span class="tag">Programa Seja Sócio (opcional)</span>
+      <span class="tag">Comunidade estratégica</span>
+    </div>
+  </section>
+
+  <!-- Prova e diferenciais -->
+  <section>
+    <h2 class="section">Por que este curso é diferente</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Abordagem autoral</h3>
+        <p>Integra Economia das Doenças, Administração Anti-Assimétrica, Neuroeconomia, Direito Anti-Contenda e inovação — um framework único para <strong>resultado clínico-financeiro</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Aplicação imediata</h3>
+        <p>Checklists de decisão, indicadores, playbooks e casos práticos. Você termina cada módulo com <strong>ações implementáveis</strong> na sua realidade.</p>
+      </div>
+      <div class="card">
+        <h3>Do conhecimento ao negócio</h3>
+        <p>Acesso ao <strong>Programa Seja Sócio</strong> para cocriar projetos, produtos e startups a partir das teses do curso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / compliance -->
+  <section id="faq">
+    <h2 class="section">Perguntas frequentes</h2>
+    <details>
+      <summary>É curso livre? Tem certificado?</summary>
+      <p>Sim, curso livre com certificado de conclusão. Indicado para aperfeiçoamento profissional e executivo.</p>
+    </details>
+    <details>
+      <summary>Serve para consultoria?</summary>
+      <p>Sim. Os métodos permitem estruturar produtos de consultoria em economia/gestão de doenças e projetos 5.0 em saúde.</p>
+    </details>
+    <details>
+      <summary>Política e ética</summary>
+      <p>Curso educacional. Não substitui orientação médica/jurídica individual. Respeita LGPD, CFM/CRMs e normas aplicáveis. Sem promessas de resultado garantido.</p>
+    </details>
+  </section>
+
+  <!-- CTA final -->
+  <section style="margin-top:10px">
+    <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+      <div>
+        <h3 style="color:var(--cyan);margin:0 0 4px">Pronto para começar?</h3>
+        <div class="small">Garanta sua vaga agora — você pode começar pelas bases e avançar para o Combo 5.0 quando quiser.</div>
+      </div>
+      <div class="cta-row" style="margin:0">
+        <a class="btn alt" href="#checkout">Entrar no Combo 5.0</a>
+        <a class="btn" href="#checkout">Economia das Doenças 5.0</a>
+        <a class="btn ghost" href="#checkout">Administração das Doenças 5.0</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 | Economia da Vida 5.0 — Curso livre com certificado • Suporte e informações: economiadavida@proton.me
+</footer>
+
+</body>
+</html>

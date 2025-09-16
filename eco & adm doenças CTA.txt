@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checkout — Economia & Administração das Doenças 5.0</title>
+<style>
+  :root{
+    --bg:#0a0d14; --panel:#111826; --ink:#eaf2ff; --muted:#9fb3c9;
+    --cyan:#7dd3fc; --pink:#ff4d6d; --line:rgba(125,211,252,.18);
+    --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
+  }
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,Roboto,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  header{padding:36px 20px;text-align:center;border-bottom:1px solid var(--line);
+    background:radial-gradient(1000px 360px at 50% -10%,#102033 20%,#0d1623 60%,#0a0d14 100%)}
+  header h1{margin:4px 0 8px;color:var(--cyan);font-size:2.2rem}
+  header p{color:#cfe0f8;max-width:900px;margin:0 auto}
+  .wrap{max-width:1120px;margin:0 auto;padding:26px 20px}
+  .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+  @media (max-width:980px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .h{color:var(--cyan);margin:0 0 8px}
+  .radio-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+  .opt{border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;background:#0e1824}
+  .opt input{margin-right:8px}
+  .price{font-weight:800}
+  .muted{color:var(--muted)}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .row .col{flex:1 1 240px}
+  .in{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0d1623;color:#eaf2ff}
+  .in::placeholder{color:#7b8ca3}
+  .btn{display:inline-block;background:var(--pink);color:#fff;font-weight:800;padding:12px 18px;border-radius:10px;box-shadow:0 16px 36px rgba(255,77,109,.18)}
+  .btn.alt{background:var(--cyan);color:#0a0d14}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:#cfe8ff}
+  .sum{font-size:1.1rem}
+  .sum b{color:#fff}
+  .badge{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;margin-right:6px}
+  .ok{color:#bbf7d0}.warn{color:#fde68a}
+  .foot{border-top:1px solid var(--line);margin-top:16px;padding-top:12px;color:#9fb3c9;font-size:.92rem}
+  .tiny{font-size:.88rem;color:#9fb3c9}
+  .hr{height:1px;background:var(--line);margin:12px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>Finalize sua matrícula</h1>
+  <p>Escolha seu curso, informe e-mail/WhatsApp, selecione forma de pagamento e confirme. Após o pagamento, você recebe <strong>acesso imediato</strong> às aulas gravadas + agenda dos encontros ao vivo.</p>
+</header>
+
+<div class="wrap">
+  <div class="grid">
+    <!-- COLUNA ESQUERDA -->
+    <section class="card">
+      <h2 class="h">1) Escolha seu curso</h2>
+      <div class="radio-list" id="courses">
+        <label class="opt">
+          <input type="radio" name="curso" value="ECO" data-preco="3997" checked>
+          <b>Economia das Doenças 5.0</b> <span class="muted">— Completo</span><br>
+          <span class="price">R$ 3.997</span>
+        </label>
+        <label class="opt">
+          <input type="radio" name="curso" value="ADM" data-preco="3997">
+          <b>Administração das Doenças 5.0</b> <span class="muted">— Completo</span><br>
+          <span class="price">R$ 3.997</span>
+        </label>
+        <label class="opt" style="border-color:rgba(255,77,109,.35)">
+          <input type="radio" name="curso" value="COMBO" data-preco="4997">
+          <b>Combo 5.0 — Economia + Administração</b> <span class="muted">— Mais recomendado</span><br>
+          <span class="price">R$ 4.997</span>
+        </label>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2 class="h">2) Seus dados</h2>
+      <div class="row">
+        <div class="col"><input class="in" id="nome" placeholder="Nome completo" /></div>
+        <div class="col"><input class="in" id="email" placeholder="Seu e-mail" /></div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <div class="col"><input class="in" id="whats" placeholder="WhatsApp (DDD + número)" /></div>
+        <div class="col"><input class="in" id="cupom" placeholder="Código de afiliado / cupom (opcional)" /></div>
+      </div>
+      <div class="tiny" style="margin-top:6px">Usamos o código para conceder descontos quando aplicável e registrar a comissão do parceiro.</div>
+
+      <div class="hr"></div>
+
+      <h2 class="h">3) Forma de pagamento</h2>
+      <div class="row">
+        <label class="opt" style="flex:1 1 220px">
+          <input type="radio" name="pagto" value="PIX" checked>
+          <b>PIX à vista</b> <span class="muted">— 5% off</span>
+        </label>
+        <label class="opt" style="flex:1 1 220px">
+          <input type="radio" name="pagto" value="CARTAO">
+          <b>Cartão de crédito</b> <span class="muted">— em até 12x*</span>
+        </label>
+      </div>
+      <div class="tiny" style="margin-top:6px">*Simulação de parcelamento depende da sua operadora/banco. Edite o link do cartão para sua plataforma (Stripe/Mercado Pago/Pagar.me).</div>
+    </section>
+
+    <!-- COLUNA DIREITA: RESUMO -->
+    <aside class="card">
+      <h2 class="h">Resumo</h2>
+      <div class="sum" id="resumo">
+        Curso: <b id="rCurso">Economia das Doenças 5.0</b><br>
+        Preço base: <b id="rPreco">R$ 3.997</b><br>
+        Pagamento: <b id="rPagto">PIX (5% off)</b><br>
+        Cupom/afiliado: <b id="rCupom">—</b><br>
+        <div class="hr"></div>
+        <div style="font-size:1.3rem">Total: <b id="rTotal">R$ 3.797</b></div>
+      </div>
+
+      <div id="boxPIX" style="margin-top:14px;display:block">
+        <div class="badge ok">PIX recomendado (mais rápido)</div>
+        <p class="tiny">Chave PIX (substitua pelos seus dados):</p>
+        <div class="row">
+          <input class="in" id="pixKey" value="SUA-CHAVE-PIX" />
+          <button class="btn ghost" onclick="copyPix()">Copiar chave</button>
+        </div>
+        <p class="tiny">Favorecido: <b>SEU-NOME-OU-EMPRESA</b>. Envie o comprovante pelo WhatsApp para liberação imediata.</p>
+        <div class="row">
+          <a class="btn alt" id="waBtn" target="_blank">Enviar comprovante no WhatsApp</a>
+          <button class="btn" onclick="confirmar()">Confirmar matrícula</button>
+        </div>
+      </div>
+
+      <div id="boxCard" style="margin-top:14px;display:none">
+        <div class="badge warn">Cartão</div>
+        <p class="tiny">Clique abaixo para finalizar na sua plataforma de pagamento (edite o link):</p>
+        <a class="btn" id="linkCartao" href="SEU_LINK_CARTAO" target="_blank">Pagar no cartão</a>
+        <div class="tiny" style="margin-top:8px">Após o pagamento, você receberá o acesso por e-mail/WhatsApp em minutos.</div>
+      </div>
+
+      <div class="foot">
+        Ao confirmar, você concorda com os <a href="#" onclick="alert('Adicione seu termo de uso/privacidade.')">Termos & Privacidade</a>. Curso livre com certificado. Sem promessas de resultado garantido.
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+  // ---- CONFIGURÁVEIS ----
+  const DESCONTO_PIX = 0.05; // 5% off à vista
+  const CUPONS = { "AFILIADO10": 0.10, "MEDICO5": 0.05 }; // edite seus cupons
+  const WHATS_DESTINO = "5591999999999"; // DDI+DDD+NUMERO para receber comprovantes
+
+  // ---- ESTADO ----
+  const state = { curso:"ECO", preco:3997, pagto:"PIX", cupom:"", descontoCupom:0 };
+
+  const nome = document.getElementById('nome');
+  const email = document.getElementById('email');
+  const whats = document.getElementById('whats');
+  const cupom = document.getElementById('cupom');
+
+  function fmt(v){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+
+  function update(){
+    // curso
+    document.querySelectorAll('input[name=curso]').forEach(r=>{
+      if(r.checked){ state.curso=r.value; state.preco=+r.dataset.preco; }
+    });
+    // pagamento
+    document.querySelectorAll('input[name=pagto]').forEach(r=>{
+      if(r.checked){ state.pagto=r.value; }
+    });
+    // cupom
+    const c = cupom.value.trim().toUpperCase();
+    state.cupom = c; state.descontoCupom = CUPONS[c] || 0;
+
+    // cálculo
+    let total = state.preco;
+    if(state.pagto==="PIX") total *= (1 - DESCONTO_PIX);
+    if(state.descontoCupom>0) total *= (1 - state.descontoCupom);
+
+    // render
+    document.getElementById('rCurso').textContent =
+      state.curso==="COMBO" ? "Combo 5.0 — Economia + Administração" :
+      state.curso==="ADM" ? "Administração das Doenças 5.0" :
+      "Economia das Doenças 5.0";
+    document.getElementById('rPreco').textContent = fmt(state.preco);
+    document.getElementById('rPagto').textContent = state.pagto==="PIX" ? "PIX (5% off)" : "Cartão";
+    document.getElementById('rCupom').textContent = state.descontoCupom>0 ? (state.cupom+" ("+(state.descontoCupom*100).toFixed(0)+"% off)") : "—";
+    document.getElementById('rTotal').textContent = fmt(total);
+
+    // boxes
+    document.getElementById('boxPIX').style.display = state.pagto==="PIX" ? "block":"none";
+    document.getElementById('boxCard').style.display = state.pagto==="CARTAO" ? "block":"none";
+
+    // link WhatsApp com mensagem
+    const msg = encodeURIComponent(
+      `Comprovante PIX - Curso: ${document.getElementById('rCurso').textContent}\n`+
+      `Total: ${fmt(total)}\n`+
+      `Nome: ${nome.value}\nE-mail: ${email.value}\nWhats: ${whats.value}\nCupom: ${state.cupom||"-"}`
+    );
+    document.getElementById('waBtn').href = `https://wa.me/${WHATS_DESTINO}?text=${msg}`;
+  }
+
+  function copyPix(){
+    const el = document.getElementById('pixKey');
+    el.select(); el.setSelectionRange(0,99999);
+    document.execCommand('copy');
+    alert("Chave PIX copiada!");
+  }
+
+  function confirmar(){
+    if(!nome.value || !email.value || !whats.value){
+      alert("Preencha nome, e-mail e WhatsApp para confirmar."); return;
+    }
+    update();
+    alert("Dados recebidos. Assim que o pagamento for confirmado você receberá o acesso por e-mail/WhatsApp.");
+  }
+
+  document.querySelectorAll('input').forEach(i=>i.addEventListener('input',update));
+  document.querySelectorAll('input[type=radio]').forEach(i=>i.addEventListener('change',update));
+  update();
+</script>
+</body>
+</html>
